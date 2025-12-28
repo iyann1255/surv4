@@ -100,6 +100,6 @@ export async function adminSignOut() {
   redirect("/admin/login");
 }
 
-export function defaultOrderLink(): string {
+export async function defaultOrderLink(): Promise<string> {
   return getEnv("DEFAULT_ORDER_LINK", "");
 }
