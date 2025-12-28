@@ -19,7 +19,7 @@ export default async function Page({ params, searchParams }: PageProps) {
     existing = data;
   }
 
-  const fallbackOrder = defaultOrderLink();
+const fallbackOrder = await defaultOrderLink();
 
   return (
     <AdminGuard>
