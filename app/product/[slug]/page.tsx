@@ -17,7 +17,7 @@ export default async function ProductDetail({ params }: { params: { slug: string
   if (error || !p) return notFound();
 
   const order = (p.order_link && isHttpUrl(p.order_link)) ? p.order_link : "";
-  const fallback = defaultOrderLink();
+  const fallback = await defaultOrderLink();
   const finalOrder = order || fallback;
 
   return (
